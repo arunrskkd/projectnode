@@ -1,0 +1,32 @@
+<div class="container">
+  <form [formGroup]="signinform" (ngSubmit)="onSubmit()">
+    <div class="row mt-3">
+
+      <div class="col-sm-6">
+        <label for="">Email</label>
+        <br>
+        <input type="text" class="form-control" formControlName="email">
+      </div>
+
+    </div>
+    <div class="row mt-3">
+
+      <div class="col-sm-6">
+        <label for="">Password</label>
+        <br>
+        <input type="text" class="form-control" formControlName="password">
+      </div>
+
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-6">
+          <button type="submit">Submit</button>
+
+
+      </div>
+    </div>
+
+  </form>
+
+
+</div>

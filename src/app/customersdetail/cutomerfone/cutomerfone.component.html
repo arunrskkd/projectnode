@@ -1,0 +1,60 @@
+
+<div class="container mt-5">
+ 
+  <div class="row alert alert-secondary">
+      <h4 class="mb-0">Add Customer Phone Number</h4>
+  </div>
+  <div class="row  mt-3">
+    <div class="col-sm-6">
+      <div class="row">
+    <label for="">Select customer</label>
+    <select  class="form-control" name="name" id="" [(ngModel)]="phonedetails.name">
+      <option *ngFor="let cust of customers" value="{{cust.name}}">{{cust.name}}</option>
+
+    </select>
+ </div>
+ <div class="row mt-3">
+   <label for="">Phone number</label>
+   <input class="form-control" type="text" [(ngModel)]="phonedetails.fone">
+ </div>
+ <div class="row  mt-3">
+   <button class="btn btn-primary" (click)="onsubmit()">Click</button>
+  </div>
+    </div>
+
+
+  </div>
+ 
+
+
+
+
+</div>
+<div class="container mt-5">
+    <div class="row alert alert-secondary">
+        <h4 class="mb-0">Customer phone Numbers </h4>
+    </div>
+
+<div class="row">
+  <table class="table table-bordered  mt-3">
+  <thead>
+    <tr>
+      <th>Slno</th><th>Name</th> <th>Phone</th> <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cust of customercontact;let i = index">
+      <td>{{i+1}}</td>
+      <td>{{cust.name}}</td>
+      <td>{{cust.fone}}</td>
+      <td><a [routerLink]="['/customerdetail/custnumbedit', cust.name]"  >edit</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  
+
+
+
+</div>

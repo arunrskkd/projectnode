@@ -1,0 +1,94 @@
+
+
+<nav class="navbar navbar-expand-sm   navbar-dark bg-dark">
+  <div class="container">
+      <div class="navbar-header clearfix">
+        <a class="navbar-brand float-left" href="#">Navbar</a>
+        <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+         
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-5"> 
+            
+          <li class="nav-item mr-3"><a class="text-white" (click)="toggledisplaymenu()">menu</a></li>
+
+          <li class="nav-item dropdown" dropdown> <!-- {1} -->
+              <a dropdownToggle class="nav-link dropdown-toggle" role="button"> <!-- {2} -->
+                Dropdown <span class="caret"></span></a>
+              <ul *dropdownMenu class="dropdown-menu "> <!-- {3} -->
+                  <li class="dropdown-item" ><a href="#">Action</a></li>
+                  <li class="dropdown-item" ><a href="#">Another action</a></li>
+                  <li class="dropdown-item" ><a href="#">Something else here</a></li>
+                 
+              </ul>
+          </li>
+        
+      </ul>
+      </div>
+  </div>
+</nav>
+<div class="menusection" *ngIf="displaymenu" >
+  <div class="sectionone">
+      <h1 class="text-info text-uppercase font-weight-bold">Menu</h1>
+      <div id="accordion mt-3">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Customer Details
+                </button>
+              </h5>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                  <li class="mr-3" routerLinkActive="active" ><a   routerLink="/customerdetail/customeradd">customeradd </a></li>
+                  <li class=" mr-3 " routerLinkActive="active"><a   routerLink="/customerdetail/customerview">customerview</a></li>
+                  <li class=" mr-3 " routerLinkActive="active"><a   routerLink="/customerdetail/customerfone">customer fone</a></li>
+                  <li class=" mr-3 " routerLinkActive="active"><a   routerLink="/customerdetail/favcolor">Favourite color</a></li>
+                  <li class=" mr-3 " routerLinkActive="active"><a   routerLink="/authentication/register">Register</a></li>
+                  <li class=" mr-3 " routerLinkActive="active"><a   routerLink="/authentication/signin">Sign in</a></li>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                 menu
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                 menu3
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <a class="text-white" (click)="toggledisplaymenu()" >Close</a>
+        </div>
+
+
+
+  </div>
+
+
+
+</div>
+<router-outlet></router-outlet>

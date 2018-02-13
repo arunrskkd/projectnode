@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.navbar-nav{
+    display: flex;
+align-items: center;
+}
+.active a{
+    color: rgb(144, 144, 228) !important;
+   font-weight: bold;
+    text-decoration: none;
+}
+.nav-item a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.dropdown a{
+    color: #000000;
+    text-decoration: none;
+}

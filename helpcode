@@ -1,0 +1,29 @@
+$ mongo --host 127.0.0.1:27017
+sudo service mongod restart/stop/start
+ use mydb
+show databases
+show collections
+db.customers.find()
+db.customers.drop()
+
+
+ng new customer-app --routing
+ng generate module customersdetail --routing
+ng generate component customersdetail/customeradd
+ng generate component customersdetail/customerview
+
+-----------------------------------------
+add to app.component.html
+
+<h1>
+  {{title}}
+</h1>
+
+<button routerLink="/customerdetail/customerview">customerview</button>
+<button routerLink="/customerdetail/customerview">customerview</button>
+
+<router-outlet></router-outlet>
+
+
+---------------------------------------------
+ng serve

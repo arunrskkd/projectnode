@@ -1,0 +1,51 @@
+<div class="container my-5">
+<form [formGroup]="addmoreForm" (ngSubmit)="onSubmit()" >
+  <div class="row">
+    <div class="col-sm-4">
+        <select name="" id=""  class="form-control" formControlName="name">
+            <option value="anoop">anoop</option>
+          <option value="arun">arun</option>
+          <option value="some">some</option>
+        </select>
+
+    </div>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" formControlName="color">
+    </div>
+   
+  </div>
+
+    <div class="mt-2" formArrayName="keywords">
+        <div class="row mt-2" *ngFor="let keycntrl of addmoreForm.get('keywords').controls ; let i=index" [formGroupName]="i">
+        <div class="col-sm-8">
+            <input type="text" class="form-control" formControlName="keys">
+        </div>
+        <div class="colsm-4">
+                <button class="btn-danger" type="button" (click)="onremove(i)">
+                  x
+                </button>
+                
+        </div>
+      </div>
+  </div>
+  <div class="row mt-2">
+      <div class="col-sm-6"> <button class="btn btn-primary" (click)="onaddingridient()" type="button">
+        Add More..
+      </button></div>
+     
+  </div>
+  <div class="row  mt-2">
+    <div class="col-sm-6">
+      <button class="btn btn-primary" type="submit">
+        Submit
+      </button>
+    </div>  
+
+      
+  </div>
+
+
+</form>
+
+
+</div>

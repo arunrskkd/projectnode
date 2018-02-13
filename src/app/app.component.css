@@ -1,0 +1,17 @@
+.collapse,.navbar-header{
+    width: 100%;
+}
+.menusection{
+    position: fixed;
+    height: 100%;
+    width: 350px;
+    background: rgba(0, 0, 0, 0.57);
+    z-index: 100000;
+}
+.sectionone{
+    width: 290px;
+    margin: 10% auto;
+}
+a{
+    cursor: pointer;
+}
